@@ -8,6 +8,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomePageComponent } from './home-page/home-page.component';
+import { CarouselModule } from 'primeng/carousel';
+import { ButtonModule } from 'primeng/button';
+import {CardModule} from 'primeng/card';
+import { StyleClassModule } from 'primeng/styleclass';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +25,11 @@ import { HomePageComponent } from './home-page/home-page.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    CarouselModule,
+    ButtonModule,
+    CardModule,
+    StyleClassModule
   ],
   providers: [],
   bootstrap: [AppComponent]

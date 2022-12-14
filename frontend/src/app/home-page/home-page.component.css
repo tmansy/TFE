@@ -107,6 +107,17 @@
   }
 }
 
+.teamCardStyle{
+  width: auto; 
+  background-color : #17161A; 
+  color: white;
+}
+
+.teamCarousel{
+  width: 60%;
+  margin: auto;
+}
+
 @media screen and (max-width: 990px){
 
 }

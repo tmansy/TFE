@@ -12,83 +12,99 @@
     <div class="text-center news fw-bold mt-5">
         <p>Nos dernières actualités</p>
     </div>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="card">
-                    <div class=""><img src="../../assets/img/test.jpg" class="d-block w-100" alt="..."> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Actualité 1</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, diam in ultrices fermentum, lectus sapien molestie enim, eu hendrerit leo mi non enim. Suspendisse viverra orci orci, mollis tincidunt ex aliquam vitae.</p>
-                        <a href="#" class="btn btn-primary">Lire l'article</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class=""><img src="../../assets/img/test.jpg" class="d-block w-100" alt="..."> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Actualité 2</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, diam in ultrices fermentum, lectus sapien molestie enim, eu hendrerit leo mi non enim. Suspendisse viverra orci orci, mollis tincidunt ex aliquam vitae.</p>
-                        <a href="#" class="btn btn-primary">Lire l'article</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class=""><img src="../../assets/img/test.jpg" class="d-block w-100" alt="..."> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Actualité 3</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, diam in ultrices fermentum, lectus sapien molestie enim, eu hendrerit leo mi non enim. Suspendisse viverra orci orci, mollis tincidunt ex aliquam vitae.</p>
-                        <a href="#" class="btn btn-primary">Lire l'article</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class=""><img src="../../assets/img/test.jpg" class="d-block w-100" alt="..."> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Acutalité 4</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, diam in ultrices fermentum, lectus sapien molestie enim, eu hendrerit leo mi non enim. Suspendisse viverra orci orci, mollis tincidunt ex aliquam vitae.</p>
-                        <a href="#" class="btn btn-primary">Lire l'article</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class=""><img src="../../assets/img/test.jpg" class="d-block w-100" alt="..."> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Actualité 5</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, diam in ultrices fermentum, lectus sapien molestie enim, eu hendrerit leo mi non enim. Suspendisse viverra orci orci, mollis tincidunt ex aliquam vitae.</p>
-                        <a href="#" class="btn btn-primary">Lire l'article</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class=""><img src="../../assets/img/test.jpg" class="d-block w-100" alt="..."> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Actualité 6</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, diam in ultrices fermentum, lectus sapien molestie enim, eu hendrerit leo mi non enim. Suspendisse viverra orci orci, mollis tincidunt ex aliquam vitae.</p>
-                        <a href="#" class="btn btn-primary">Lire l'article</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <div class="team fw-bold mt-5 mb-3">
-        <p class="ps-3">Equipes</p>
-        <img src="../../assets/img/team.png" style="width:840px; height:auto" class="d-block mx-auto pb-1 img-fluid" alt="team r4n">
-        <div class="text-center">
-            <button type="button" class="btn btn-dark mx-auto">Découvrir nos équipes<i class="bi bi-chevron-right fw-bold"></i></button>
-        </div>
-    </div>
+    
+    <div class="team fw-bold mt-5 pb-2 mb-5">
+        <p class="ps-3">Equipes League of Legends</p>
+        <p-carousel [value]="teams" [numVisible]="1" [numScroll]="1" [circular]="true" [autoplayInterval]="0" styleClass="teamCarousel">
+            <ng-template let-teams pTemplate="items">
+                <p-card header="{{teams.name}}" styleClass="teamCardStyle">
+                    <ng-template pTemplate="header">
+                        <img alt="Card" [src]="teams.source">
+                    </ng-template> 
+                        <p>{{teams.description}}</p>
+                    <ng-template pTemplate="footer">
+                        <button pButton pRipple type="button" label="Découvrir la team" class="p-button-rounded p-button-secondary"></button>
+                    </ng-template>
+                </p-card>
+            </ng-template>
+        </p-carousel>
+    </div>    
+
 </div>
+
+
+
+<!--
+            <img src="../../assets/img/team.png" style="width:840px; height:auto" class="d-block mx-auto pb-1 img-fluid" alt="team r4n">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="card">
+                <div class=""><img src="../../assets/img/test.jpg" class="d-block w-100" alt="..."> </div>
+                <div class="card-body">
+                    <h5 class="card-title">Actualité 1</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, diam in ultrices fermentum, lectus sapien molestie enim, eu hendrerit leo mi non enim. Suspendisse viverra orci orci, mollis tincidunt ex aliquam vitae.</p>
+                    <a href="#" class="btn btn-primary">Lire l'article</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                <div class=""><img src="../../assets/img/test.jpg" class="d-block w-100" alt="..."> </div>
+                <div class="card-body">
+                    <h5 class="card-title">Actualité 2</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, diam in ultrices fermentum, lectus sapien molestie enim, eu hendrerit leo mi non enim. Suspendisse viverra orci orci, mollis tincidunt ex aliquam vitae.</p>
+                    <a href="#" class="btn btn-primary">Lire l'article</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                <div class=""><img src="../../assets/img/test.jpg" class="d-block w-100" alt="..."> </div>
+                <div class="card-body">
+                    <h5 class="card-title">Actualité 3</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, diam in ultrices fermentum, lectus sapien molestie enim, eu hendrerit leo mi non enim. Suspendisse viverra orci orci, mollis tincidunt ex aliquam vitae.</p>
+                    <a href="#" class="btn btn-primary">Lire l'article</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                <div class=""><img src="../../assets/img/test.jpg" class="d-block w-100" alt="..."> </div>
+                <div class="card-body">
+                    <h5 class="card-title">Acutalité 4</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, diam in ultrices fermentum, lectus sapien molestie enim, eu hendrerit leo mi non enim. Suspendisse viverra orci orci, mollis tincidunt ex aliquam vitae.</p>
+                    <a href="#" class="btn btn-primary">Lire l'article</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                <div class=""><img src="../../assets/img/test.jpg" class="d-block w-100" alt="..."> </div>
+                <div class="card-body">
+                    <h5 class="card-title">Actualité 5</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, diam in ultrices fermentum, lectus sapien molestie enim, eu hendrerit leo mi non enim. Suspendisse viverra orci orci, mollis tincidunt ex aliquam vitae.</p>
+                    <a href="#" class="btn btn-primary">Lire l'article</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                <div class=""><img src="../../assets/img/test.jpg" class="d-block w-100" alt="..."> </div>
+                <div class="card-body">
+                    <h5 class="card-title">Actualité 6</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, diam in ultrices fermentum, lectus sapien molestie enim, eu hendrerit leo mi non enim. Suspendisse viverra orci orci, mollis tincidunt ex aliquam vitae.</p>
+                    <a href="#" class="btn btn-primary">Lire l'article</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div> -->
