@@ -12,6 +12,7 @@ import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import {CardModule} from 'primeng/card';
 import { StyleClassModule } from 'primeng/styleclass';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { StyleClassModule } from 'primeng/styleclass';
     NavbarComponent,
     FooterComponent,
     HomePageComponent,
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,

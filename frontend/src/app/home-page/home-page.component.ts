@@ -14,54 +14,60 @@ import {StyleClassModule} from 'primeng/styleclass';
 })
 
 export class HomePageComponent implements OnInit {
+  isLolTeamVisible = true;
+  lolLogoPath = "./../assets/img/lol_logo.png";
+  tftLogoPath = "./../assets/img/tft_logo.png";
   teams: Team[] = [];
+  tftPlayers: TftPlayer[] = [];
 
   constructor() { }
   
   ngOnInit(): void {
     this.teams = [
-      { name : "Error 404", source : "./../assets/img/team.png", description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deseruntquisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!" },
-      { name : "Shitori", source  : "", description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deseruntquisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!"}
+      { name : "ERROR 404", 
+      source : "./../assets/img/team1.png", 
+      description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deseruntquisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!",
+      capitaine : "Mbappe",
+      coach : "Didier Deschamps" },
+      { name : "BROKEN ARMS", 
+      source  : "./../assets/img/team2.png", 
+      description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deseruntquisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!",
+      capitaine : "Messi",
+      coach : "Pep Guardiola"},
+      { name : "SHITORI", 
+      source : "./../assets/img/team3.png",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deseruntquisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!",
+      capitaine : "Lukaku",
+      coach : "Roberto Martinez"}
+    ];
+
+    this.tftPlayers = [
+      { name : "FALCK0RN",
+        source : "./../assets/img/tftPlayer1.png",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deseruntquisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!"
+      },
+      { name : "AUXILIUM",
+        source : "./../assets/img/tftPlayer2.png",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deseruntquisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!"
+      },
+      { name : "STANLAWL",
+        source : "./../assets/img/tftPlayer3.png",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deseruntquisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!"
+      }
     ];
   }
-
 }
 
 interface Team{
-  name : string;
-  source : string;
-  description : string;
+  name : string,
+  source : string,
+  description : string,
+  capitaine : string,
+  coach : string
 }
 
-/* 
-var multipleCardCarousel = document.querySelector(
-      "#carouselExampleControls"
-    );
-    if (window.matchMedia("(min-width: 768px)").matches) {
-      var carousel = new bootstrap.Carousel(multipleCardCarousel, {
-        interval: false,
-      });
-      var carouselWidth = $(".carousel-inner")[0].scrollWidth;
-      var cardWidth = $(".carousel-item").width();
-      var scrollPosition = 0;
-      $("#carouselExampleControls .carousel-control-next").on("click", function () {
-        if (scrollPosition < carouselWidth - cardWidth * 4) {
-          scrollPosition += cardWidth;
-          $("#carouselExampleControls .carousel-inner").animate(
-            { scrollLeft: scrollPosition },
-            600
-          );
-        }
-      });
-      $("#carouselExampleControls .carousel-control-prev").on("click", function () {
-        if (scrollPosition > 0) {
-          scrollPosition -= cardWidth;
-          $("#carouselExampleControls .carousel-inner").animate(
-            { scrollLeft: scrollPosition },
-            600
-          );
-        }
-      });
-    } else {
-      $(multipleCardCarousel).addClass("slide");
-    }*/
+interface TftPlayer{
+  name: string,
+  source: string,
+  description: string
+}
