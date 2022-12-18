@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&display=swap');
+
 div{
     display: flex;
     flex-direction: column;
@@ -35,4 +37,20 @@ h1 {
     text-align: center;
     font-size: 14px;
     font-weight: bolder;
+}
+
+.container_chiffres{
+    height: 120px;
+}
+
+.chiffres{
+    background-color: #f3bc30;
+    padding: 1rem;
+    justify-content: flex-start;
+}
+
+.container_margin{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    font-family: 'Montserrat', sans-serif;
 }

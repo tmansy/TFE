@@ -16,6 +16,7 @@ import { SponsorPageComponent } from './sponsor-page/sponsor-page.component';
 import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     HomePageComponent,
     SponsorPageComponent,
     AboutUsComponent,
+    ContactPageComponent,
   ],
   imports: [
     BrowserModule,
