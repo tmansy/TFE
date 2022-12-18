@@ -10,8 +10,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
-import {CardModule} from 'primeng/card';
+import { CardModule } from 'primeng/card';
 import { StyleClassModule } from 'primeng/styleclass';
+import { ImageModule } from 'primeng/image';
+import { SponsorPageComponent } from './sponsor-page/sponsor-page.component';
+import { DialogModule } from 'primeng/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -20,6 +24,7 @@ import { StyleClassModule } from 'primeng/styleclass';
     NavbarComponent,
     FooterComponent,
     HomePageComponent,
+    SponsorPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,10 @@ import { StyleClassModule } from 'primeng/styleclass';
     CarouselModule,
     ButtonModule,
     CardModule,
-    StyleClassModule
+    StyleClassModule,
+    ImageModule,
+    DialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

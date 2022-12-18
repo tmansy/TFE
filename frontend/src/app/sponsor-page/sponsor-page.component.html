@@ -1,0 +1,24 @@
+<div id = "sponsor-page" class="container">
+    <div *ngFor="let sponsorGroup of groupedSponsors; index as i; first as isFirst">
+        <div class="row">
+          <div *ngFor="let sponsor of sponsorGroup; index as i; first as isFirst" class="col-sm">
+            <div *ngIf="sponsor.source != '';else genericLogo">
+              <p-image (click)="showModalDialog(sponsor)" src="{{sponsor.source}}" alt="Image" width="250">
+              </p-image>
+            </div>
+            <ng-template #genericLogo>
+              <p-image (click)="showModalDialog(sponsor)" src="../../assets/img/r4n_logo.png" alt="Image" width="250">
+              </p-image>
+            </ng-template>
+          </div>
+        </div>
+    </div>
+    
+  <p-dialog header="{{this.modalHeaderText}}" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}"
+  [draggable]="false" [resizable]="false">
+  <p class="m-0">{{this.modalBodyText}}</p>
+      <ng-template pTemplate="footer">
+      <p-button icon="" (click)="displayModal=false" label="Fermer" styleClass="p-button-text"></p-button>
+      </ng-template>
+  </p-dialog>
+</div>

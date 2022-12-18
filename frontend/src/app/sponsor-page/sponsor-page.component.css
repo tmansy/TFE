@@ -1,0 +1,14 @@
+#sponsor-page{
+    color: white;
+    text-align: center;
+}
+.col-sm{
+    margin-top: 3em;
+    margin-bottom: 5px;
+}
+p-image:hover{
+    cursor: pointer;
+}
+p-dialog {
+    background-color: #17161A;
+}
