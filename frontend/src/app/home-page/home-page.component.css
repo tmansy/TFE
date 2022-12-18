@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&display=swap');
+
 .img-wrapper {
   position: relative;
   margin-top: 5em;
@@ -79,4 +81,8 @@
 
 a{
   cursor: pointer;
+}
+
+.font{
+  font-family: 'Montserrat', sans-serif;
 }

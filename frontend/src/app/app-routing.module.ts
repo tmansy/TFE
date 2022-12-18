@@ -7,6 +7,7 @@ import { TeamPresentationComponent } from './team-presentation/team-presentation
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TournamentComponent } from './tournament/tournament.component';
 import { ShopComponent } from './shop/shop.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
 
 const routes: Routes = [
   { path: "", component: HomePageComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: "team-presentation", component: TeamPresentationComponent },
   { path: "shop", component: ShopComponent },
   { path: "tournament", component: TournamentComponent },
+  { path: "contact", component: ContactPageComponent },
   { path: "**", pathMatch: 'full', component: NotFoundComponent }
 ];
 

@@ -20,6 +20,7 @@ import { TeamPresentationComponent } from './team-presentation/team-presentation
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TournamentComponent } from './tournament/tournament.component';
 import { ShopComponent } from './shop/shop.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { ShopComponent } from './shop/shop.component';
     NotFoundComponent,
     TournamentComponent,
     ShopComponent,
+    ContactPageComponent,
   ],
   imports: [
     BrowserModule,
