@@ -16,6 +16,10 @@ import { SponsorPageComponent } from './sponsor-page/sponsor-page.component';
 import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { TeamPresentationComponent } from './team-presentation/team-presentation.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { TournamentComponent } from './tournament/tournament.component';
+import { ShopComponent } from './shop/shop.component';
 
 
 @NgModule({
@@ -26,6 +30,10 @@ import { AboutUsComponent } from './about-us/about-us.component';
     HomePageComponent,
     SponsorPageComponent,
     AboutUsComponent,
+    TeamPresentationComponent,
+    NotFoundComponent,
+    TournamentComponent,
+    ShopComponent,
   ],
   imports: [
     BrowserModule,

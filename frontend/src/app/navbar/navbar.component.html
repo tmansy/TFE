@@ -15,7 +15,7 @@
                     <a routerLink="about-us" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{}" class="nav-link nav_hover fw-bold px-3" href="#" (click)="isMenuCollapsed = true">QUI SOMMES-NOUS ?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav_hover fw-bold px-3" href="#" (click)="isMenuCollapsed = true">TOURNOIS</a>
+                    <a routerLink="tournament" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{}" class="nav-link nav_hover fw-bold px-3" href="#" (click)="isMenuCollapsed = true">TOURNOIS</a>
                 </li>
                 <li class="nav-item">
                      <a routerLink="sponsors" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{}" class="nav-link nav_hover fw-bold px-3" href="#" (click)="isMenuCollapsed = true">SPONSORS</a>
@@ -26,7 +26,7 @@
             </ul>
             <ul class="navbar-nav mb-lg align-items-center">
                 <li class="nav-item shop shop-item">
-                    <a class="nav-link fw-bold border border-2 border-dark shop-text shop-item2" id="shop-width" href="#" (click)="isMenuCollapsed = true"><i class="pi pi-shopping-bag"></i>SHOP</a>
+                    <a class = "nav-link fw-bold border border-2 border-dark shop-text shop-item2" routerLink="shop" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{}"  href="#" (click)="isMenuCollapsed = true"><i class="pi pi-shopping-bag"></i> SHOP</a>
                 </li>
             </ul>        
         </div> 

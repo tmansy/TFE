@@ -3,11 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { SponsorPageComponent } from './sponsor-page/sponsor-page.component';
+import { TeamPresentationComponent } from './team-presentation/team-presentation.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { TournamentComponent } from './tournament/tournament.component';
+import { ShopComponent } from './shop/shop.component';
 
 const routes: Routes = [
   { path: "", component: HomePageComponent },
   { path: "about-us", component: AboutUsComponent },
-  { path: "sponsors", component: SponsorPageComponent }
+  { path: "sponsors", component: SponsorPageComponent },
+  { path: "team-presentation", component: TeamPresentationComponent },
+  { path: "shop", component: ShopComponent },
+  { path: "tournament", component: TournamentComponent },
+  { path: "**", pathMatch: 'full', component: NotFoundComponent }
 ];
 
 @NgModule({

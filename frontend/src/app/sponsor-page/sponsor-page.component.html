@@ -1,7 +1,8 @@
 <div id = "sponsor-page" class="container">
+    <p style = "margin-top : 3em; margin-bottom: 2em;" class="paragraphe fs-4 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed posuere leo. Mauris nulla neque, tincidunt in faucibus nec, bibendum aliquet neque. Nulla vel ligula sodales, facilisis est non, pharetra ligula. Nulla quis lacus nunc. Nam semper imperdiet tincidunt. Maecenas mattis ullamcorper dui, eu mollis ex iaculis eu. Morbi hendrerit ipsum in elit feugiat rutrum. Phasellus dapibus rutrum aliquet. Maecenas id dolor cursus, ullamcorper turpis et, aliquam enim. Integer ac magna auctor, gravida diam nec, venenatis nisl. Duis sollicitudin sem purus, non ultricies leo consectetur ac. Vestibulum ac neque ut eros euismod vulputate ac a lectus. Curabitur tellus enim, tristique eu turpis in, commodo aliquam felis.</p>
     <div *ngFor="let sponsorGroup of groupedSponsors; index as i; first as isFirst">
         <div class="row">
-          <div *ngFor="let sponsor of sponsorGroup; index as i; first as isFirst" class="col-sm">
+          <div *ngFor="let sponsor of sponsorGroup; index as i; first as isFirst" class="col-sm imgHover">
             <div *ngIf="sponsor.source != '';else genericLogo">
               <p-image (click)="showModalDialog(sponsor)" src="{{sponsor.source}}" alt="Image" width="250">
               </p-image>
@@ -16,7 +17,13 @@
     
   <p-dialog header="{{this.modalHeaderText}}" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}"
   [draggable]="false" [resizable]="false">
-  <p class="m-0">{{this.modalBodyText}}</p>
+  <p class="m-0">
+    {{this.modalBodyText}}
+    <br>
+  </p>
+  <p style = "margin-top: 1em; margin-left : 2em;text-align: left;">
+    <a href = "{{this.modalUrl}}" target ="_blank">Visiter le site web</a>
+  </p>
       <ng-template pTemplate="footer">
       <p-button icon="" (click)="displayModal=false" label="Fermer" styleClass="p-button-text"></p-button>
       </ng-template>
